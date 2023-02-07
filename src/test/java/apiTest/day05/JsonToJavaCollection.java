@@ -62,12 +62,12 @@ public class JsonToJavaCollection {
         List<Map<String,Object>> allBody = response.body().as(List.class);
 
         //verify ... users detail
-        Map<String,Object> userEurotech = (Map<String,Object>) allBody.get(1).get("user");
-        System.out.println("userEurotech = " + userEurotech);
+        Map<String,Object> userTestAccount = (Map<String,Object>) allBody.get(1).get("user");
+        System.out.println("userTestAccount = " + userTestAccount);
 
-        assertEquals(userEurotech.get("id"),37.0);
-        assertEquals(userEurotech.get("email"),"testaccount@gmail.com");
-        assertEquals(userEurotech.get("name"),"TestAccount");
+        assertEquals(userTestAccount.get("id"),37.0);
+        assertEquals(userTestAccount.get("email"),"testaccount@gmail.com");
+        assertEquals(userTestAccount.get("name"),"TestAccount");
 
         allBody.get(1).get("company");
         String actualCompany = (String) allBody.get(1).get("company");

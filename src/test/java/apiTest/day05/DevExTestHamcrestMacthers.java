@@ -20,10 +20,12 @@ public class DevExTestHamcrestMacthers {
     }
     @Test
     public void getOneUser(){
-        /*Task
-
-
-        */
+        /* Task
+        Given accept content type application json
+        And query param id 528
+        When user sends GET request to /api/profile/userQuery
+        Then status code is 200
+         */
         given().accept(ContentType.JSON)
                 .queryParam("id",528)
                 .when().get("/api/profile/userQuery")
